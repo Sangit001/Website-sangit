@@ -5,6 +5,7 @@
     --secondary-color:#333377;
     --color1:#95B2B0;
     --color2:C6EBBE;
+
 }
 
 
@@ -395,9 +396,9 @@ input{
 /* responsive */
 
 @media (max-width:956px){
-    .navigation{
-        display: none;
-    }
+.navigation{
+    display: none;
+}
     .profile-section{
         flex-direction: column;
     }
@@ -407,6 +408,10 @@ input{
     #form-section{
         width: 100%;
     }
+        .main-body{
+            overflow-x: hidden;
+    }
+
 
 }
 @media (max-width:600px){
@@ -422,6 +427,9 @@ input{
     }
     .profile-title h3{
         font-size: 30px;
+    }
+        .main-body{
+            overflow-x: hidden;
     }
 
 
@@ -446,5 +454,15 @@ input{
     .footer-section{
 width: 100%;
     }
+    .navigation{
+        display: flex;
+        width: 250px;
+        position: sticky;
+        z-index: 10;
+    }
 
+    .nav-option a{
+        display: none;
+    }
 }
+
