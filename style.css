@@ -1,0 +1,390 @@
+*{
+    margin: 0;
+    padding: 0;
+    --primary-color:#cde8f8;
+    --secondary-color:#333377;
+    --color1:#95B2B0;
+    --color2:C6EBBE;
+}
+
+
+:root{
+   --background:hsla(0, 0%, 100%, 0.027);
+   --blur:blur(2px);
+   --shadow: inset 0 0 8px 1px hsl(0, 0%, 100%,0.3);
+   --transition: all 0.2s ease-out;
+
+}
+body{
+    scroll-behavior: smooth;
+    background-image: url(./images/coolbackgrounds-topography-micron.svg);
+    height:100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-family: system-ui;  
+      flex-direction: column;
+       transition: background-color 0.9s, color 0.9s;
+      user-select: none;
+      gap: 20px;
+      background-repeat: no-repeat;
+      padding: 20px 0px;
+
+}
+.navigation{
+display: flex;
+justify-content: space-around;
+align-items: center;
+    backdrop-filter:blur(12px);
+    background: hsla(0, 0%, 100%, 0.027);
+    box-shadow: inset 0 0 8px 1px hsl(0, 0%, 100%,0.3);
+    border-radius: 30px;
+    text-decoration: none;
+    transition: opacity 0.26s ease-out;
+    width: 50%;
+    height: 50px;
+    gap: 10px;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    z-index: 10;
+
+}
+.nav-option{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.logo h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: max-content;
+    box-shadow: var(--shadow);
+    border-radius: 50px;
+    backdrop-filter: var(--blur);
+    padding: 0 10px;
+    cursor: pointer;
+}
+.nav-option a{
+    color: white;
+display: flex;
+justify-content: center;
+align-items: center;
+    backdrop-filter:blur(2px);
+    background: hsla(0, 0%, 100%, 0.027);
+    box-shadow: inset 0 0 8px 1px hsl(0, 0%, 100%,0.3);
+    border-radius: 50px;
+    text-decoration: none;
+    height: 40px;
+    width: max-content;
+    padding: 0px 15px;
+    transition: all 0.2s;
+}
+
+a:hover{
+
+ transform: scale(1.07);
+}
+
+/* Dark mode */
+.night-mode{
+    background:var(--background);
+    backdrop-filter: var(--blur);
+    box-shadow: var(--shadow);
+    border: none;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition);
+
+}
+.night-mode:hover{
+    transform: scale(1.05);
+}
+#night{
+    display: block;
+    height: 25px;
+}
+#light{
+    display: none;
+    height: 25px;
+}
+/* right-nav */
+.right-nav{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+
+/* profile picture */
+
+.profile{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 200px;
+    
+}
+.profile-section{
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-top:50px ;
+    box-shadow: var(--shadow);
+    border-radius: 30px;
+    padding: 50px;
+    backdrop-filter:blur(4px);
+    gap: 10px;
+    flex-direction: row;
+    gap: 100px;
+    transition: var(--transition);
+}
+.profile-section:hover{
+    transform: scale(1.01);
+}
+.prifile-name{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.profile-picture img{
+    box-shadow: var(--shadow);
+    backdrop-filter: var(--blur);
+    border-radius: 50%;
+    height: 100px;
+}
+
+/* Profile-message-button */
+.profile-message-button{
+
+    background-color: #000000;
+    border: none;
+    height: 40px;
+    border-radius: 50px;
+    padding: 0 10px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    max-width:200px ;
+    color: white;
+}
+.profile-message-button:hover{
+    transform: scale(1.05);
+}
+.profile-title{
+    font-size: 50px;
+}
+
+/*=====================> Skills section <=====================*/
+.skills-logo{
+    background-color: rgba(190, 190, 190, 0.198);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow:var(--shadow);
+    gap: 20px;
+    height: max-content;
+    width: max-content;
+    padding: 20px 35px;
+    border-radius: 20px;
+}
+.skills-logo img{
+    height: 50px;
+    transition: var(--transition);
+}
+.skills-logo img:hover{
+    transform: scale(1.1);
+}
+.skills-section{
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.skills-section h3{
+    font-size: 20px;
+}
+
+/* ===================> activities-section <================= */
+
+.activities-section{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    height: fit-content;
+    flex-direction: column;
+    gap: 20px;
+}
+.activities-section h3{
+    font-size: 20px;
+}
+.activity-titles{
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    gap: 10px;
+}
+
+/* footer section */
+
+.footer-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+}
+.footer-section h2{
+        font-size: 40px;
+    word-break: break-all;
+
+}
+
+/* Form section */
+
+form{
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    width: 40%;
+    padding: 20px;
+    border-radius: 30px;
+        border: none;
+    box-shadow: var(--shadow);
+    background: none;
+    backdrop-filter: var(--blur);
+    color: white;
+    gap: 10px;
+
+}
+form h4{
+    font-size: 25px;
+}
+.input-section{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+
+}
+.input-section input{
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: var(--shadow);
+    background: none;
+    backdrop-filter: var(--blur);
+}
+.send-button{
+        height: 40px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: var(--shadow);
+    background: none;
+    backdrop-filter: var(--blur);
+    width: max-content;
+    padding: 0px 20px;
+    transition: var(--transition);
+}
+.send-button:hover{
+    transform: scale(1.05);
+}
+.contact-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    background: url(./images/Artboard\ 1.png);
+        padding: 20px 20px;
+        border-radius: 20px;
+        gap: 10px;
+}
+input:focus{
+    outline: none;
+    border: 0px solid;
+}
+input{
+    padding-left:10px ;
+    color: white;
+}
+.input-section label{
+    padding: 10px;
+}
+#message{
+    height: 400px;
+    display: flex;
+    justify-content: flex-start;
+    all: unset;
+    box-shadow: var(--shadow);
+    border-radius: 20px;
+    backdrop-filter: var(--blur);
+    padding: 10px;
+    overflow-wrap: break-word;
+}
+
+
+/* Social media logo */
+.social-media{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    transition: var(--transition);
+
+}
+
+.social-logos{
+        background-color: rgba(190, 190, 190, 0.198);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow:var(--shadow);
+    gap: 20px;
+    height: max-content;
+    width: max-content;
+    padding: 20px 35px;
+    border-radius: 20px;
+    transition: var(--transition);
+}
+
+.social-logos img{
+    transition: var(--transition);
+    height: 50px;
+}
+.social-logos img:hover{
+    transform: scale(1.1);
+}
+
+
+/* Projects */
+
+#projects{
+        box-shadow: var(--shadow);
+    height: 200px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+#projects h3{
+    font-size: 20px;
+
+}
+
+

@@ -1,11 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-<h1>THIS WEBSITE IS UNDER MAINTAINANCE</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>San Git</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- <h1>THIS WEBSITE IS UNDER MAINTAINANCE</h1> -->
+    <nav class="navigation">
+      <div class="logo">
+        <h2>SANGIT</h2>
+      </div>
+      <div class="nav-option">
+        <a href="">HOME</a>
+        <a href="">BLOG</a>
+        <a href="">ABOUT ME</a>
+        <a href="">SKILLS</a>
+      </div>
+      <div class="right-nav">
+        <button class="night-mode dark" onclick="darkLight()">
+          <img src="./images/dark-mode.png" id="night" alt="" />
+          <img src="./images/light-mode.png" alt="" id="light" />
+        </button>
+      </div>
+    </nav>
+
+    <profile class="profile-section">
+      <div class="profile">
+        <div class="profile-picture">
+          <img src="./images/profile.png" alt="" />
+        </div>
+        <h2>Sangit Pandey</h2>
+        <h3 style="color: gray">Student</h3>
+        <p style="color: gray">Butwal, Lumbini, Nepal</p>
+        <p style="color: gray">Nepathya College</p>
+        <button class="profile-message-button" type="submit">Message</button>
+      </div>
+      <div class="profile-title">
+        <h1>Sangit Pandey</h1>
+        <h3>Introducint my brand new portfolio Website</h3>
+      </div>
+    </profile>
+
+    <skills class="skills-section">
+      <h3>
+        <b><i>Skills</i></b>
+      </h3>
+      <div class="skills-logo">
+        <img src="./images/java.png" alt="" />
+        <img src="./images/mysql.png" alt="" />
+        <img src="./images/git.png" alt="" />
+        <img src="./images/linux.png" alt="" />
+        <img src="./images/github.png" alt="" />
+        <img src="./images/js.png" alt="" />
+        <img src="./images/html.png" alt="" />
+        <img src="./images/css-3.png" alt="" />
+        <img src="./images/photoshop.png" alt="" />
+        <img src="./images/davinci.png" alt="" />
+      </div>
+    </skills>
+
+    <!-- Activitiess -->
+
+    <activities class="activities-section">
+      <h3>
+        <i><b>Activities</b></i>
+      </h3>
+
+      <div class="activity-titles">
+        <h4>Where you learned your skills?</h4>
+        <p>
+          Learning as a beginner was extremely challenging for me, as I had no
+          prior knowledge and no clear direction at the start. I had not begun
+          learning seriously until I explored my college course structure,
+          online learning resources, and conducted my own research. Through this
+          process, I was able to understand the importance of having a proper
+          learning roadmap. Today, I am on a clear and focused path toward
+          becoming a backend developer. I began my journey with the fundamentals
+          of web development, learning HTML, CSS, and JavaScript. Gradually, I
+          transitioned to Java, starting from the basics and progressing through
+          object-oriented programming concepts and advanced Java topics. At
+          present, I am learning MySQL to strengthen my understanding of
+          databases, and after completing this, I plan to move forward with
+          Spring to build robust and scalable backend applications. In the
+          following section, I will share the learning platforms and resources
+          that have guided me throughout each stage of my learning journey.
+        </p>
+        <h4>What you’re currently working on?</h4>
+        <p>
+          Completed learning Web Development fundamentals (HTML, CSS,
+          JavaScript)<br />
+          Exploring Backend development concepts and RESTful APIs <br />
+          Building small projects to apply frontend and backend knowledge <br />
+          Practicing Git & GitHub for version control <br />
+          Learning database basics and server-side logic <br />
+          Studying from official documentation, online courses, and tutorials
+          <br />
+        </p>
+        <h4>How you improve yourself?</h4>
+        <p>
+          I improve myself by constantly learning new skills and expanding my
+          knowledge, especially in areas related to my goals. I set clear
+          targets and track my progress regularly. I also seek feedback from
+          mentors and peers, which helps me identify areas I can improve.
+          Finally, I reflect on my experiences and stay consistent in practicing
+          and applying what I learn.
+        </p>
+      </div>
+    </activities>
+
+    <!-- Social media -->
+    <socialMedia class="social-media">
+      <h3>
+        <b><i>Social Media</i></b>
+      </h3>
+      <div class="social-logos">
+        <a href="https://www.linkedin.com/in/sangit-pandey-8ab846341/"
+          ><img src="./images/linkedin.png" alt=""
+        /></a>
+        <a href="https://github.com/Sangit001"
+          ><img src="./images/github.png" alt=""
+        /></a>
+        <a href=""> <img src="./images/twitter.png" alt="" /></a>
+        <a href=""><img src="./images/instagram.png" alt="" /></a>
+        <a href=""><img src="./images/facebook.png" alt="" /></a>
+        <a href=""><img src="./images/tiktok.png" alt="" /></a>
+      </div>
+    </socialMedia>
+
+    <projects id="projects">
+      <h3>
+        <b><i>Projects</i></b>
+      </h3>
+      <p>Currently working on it.........</p>
+    </projects>
+
+    <!-- Contact Me -->
+
+      <section class="contact-section">
+        <form action="#" id="form-section">
+          <h4>You can contact me</h4>
+          <div class="input-section">
+            <label for="username">Enter your username</label>
+            <input type="text" id="username" placeholder="Username" />
+            <label for="email">Enter your email</label>
+            <input type="email" id="email" placeholder="Email" />
+            <label for="message">Write a message</label>
+            <textarea
+              name="Messagee..."
+              rows="10"
+              cols="10"
+              id="message"
+            ></textarea>
+          </div>
+          <button class="send-button" type="submit" onclick="sendMessage()">
+            Send Message
+          </button>
+        </form>
+
+        <div class="footer-section">
+            <h2>Thankyou for visiting my website.</h2>
+            <p>This website is not yet fully functional and requires several improvements. Created on 14 January 2026.</p>
+      </div>
+
+        </div>
+
+
+
+
+
+
+      </section>
+
+    <script src="./script.js"></script>
+  </body>
 </html>
