@@ -16,8 +16,10 @@
    --transition: all 0.2s ease-out;
 
 }
+html{
+        scroll-behavior: smooth;
+}
 body{
-    scroll-behavior: smooth;
     background-image: url(./images/coolbackgrounds-topography-micron.svg);
     height:100%;
     width: 100%;
@@ -83,7 +85,7 @@ align-items: center;
     border-radius: 50px;
     text-decoration: none;
     height: 40px;
-    width: max-content;
+    width: fit-content;
     padding: 0px 15px;
     transition: all 0.2s;
 }
@@ -401,6 +403,8 @@ input{
 }
     .profile-section{
         flex-direction: column;
+        width: 100%;
+        padding: 0px;
     }
     .footer-section h2{
         font-size: 10px;
@@ -410,6 +414,9 @@ input{
     }
         .main-body{
             overflow-x: hidden;
+    }
+    .profile{
+        padding-left: 20px;
     }
 
 
@@ -429,6 +436,7 @@ input{
         font-size: 30px;
     }
         .main-body{
+            width: 100%;
             overflow-x: hidden;
     }
 
@@ -441,22 +449,25 @@ input{
         flex-direction: row;
         height: 100px;
         width: 250px;
-        overflow:auto;
+        overflow-x:auto;
+        overflow-y: hidden;
 
     }
     .social-logos{
         justify-content: flex-start;
         flex-direction: row;
-        width: 280px;
+        width: 250px;
         height: 100px;
-        overflow: auto;
+        overflow-x: auto;
+        overflow-y: hidden;
     }
+
     .footer-section{
-width: 100%;
+    width: 100%;
     }
     .navigation{
         display: flex;
-        width: 250px;
+        width: 50%;
         position: sticky;
         z-index: 10;
     }
