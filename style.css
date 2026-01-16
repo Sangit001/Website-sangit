@@ -18,6 +18,7 @@
 }
 html{
         scroll-behavior: smooth;
+        scrollbar-width: none;
 }
 body{
     background-image: url(./images/coolbackgrounds-topography-micron.svg);
@@ -403,7 +404,7 @@ input{
 }
     .profile-section{
         flex-direction: column;
-        width: 100%;
+        width: 80%;
         padding: 0px;
     }
     .footer-section h2{
@@ -416,7 +417,7 @@ input{
             overflow-x: hidden;
     }
     .profile{
-        padding-left: 20px;
+        padding: 20px;
     }
 
 
@@ -477,3 +478,19 @@ input{
     }
 }
 
+
+@media(max-width:500px){
+    .main-body{
+        width: 100%;
+
+    }
+    .skills-section{
+        width: 100%;
+        overflow: hidden;
+    }
+    .skills-logo{
+        width: 80%;
+        overflow-x: auto;
+        justify-content: flex-start;
+    }
+}
