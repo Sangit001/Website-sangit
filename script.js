@@ -45,9 +45,8 @@ function toggleSearch(){
 
 // Contact section
 
-let username = document.getElementById("username");
-let email = document.getElementById("email");
-let message = document.getElementById("message");
+
+
 
 
   const form = document.getElementById("form-section");
@@ -56,17 +55,50 @@ let message = document.getElementById("message");
     event.preventDefault(); // 🚫 STOP REFRESH
   });
 
-//   submit
+//   submit form
+
+
+(function(){
+    emailjs.init("rCBxulKZwX_5icvM6"); // Public key
+})();
 
 function sendMessage(){
-     if(username.value=="" || email.value == ""|| message.value == "" ){
-        alert("Can't send");
+
+    let username = document.getElementById("username");
+let email = document.getElementById("email");
+let message = document.getElementById("message");
+
+
+
+     if(username.value==""){
+        alert("!Username can't be empty");
+    }
+    else if(email.value == ""){
+        alert("!Email can't be empty");
+    }
+    else if(message.value == ""){
+        alert("Please leave any message");
     }
     else{
-        alert("send successfully")
-        username.value="";
-         email.value = "";
-         message.value = "";
+ let details = {
+    from_name: username.value,
+    from_email: email.value,
+    message: message.value
+  };
+
+  emailjs.send("service_bgcp55d", "template_87hi9ej", details)
+    .then(function(response) {
+      alert("Message sent successfully");
+      email.value = "";
+      username.value = "";
+      message.value = "";
+    }, function(error) {
+      alert("Something went wrong");
+      console.log("FAILED...", error);
+    });
 
     }
 }
+
+
+
